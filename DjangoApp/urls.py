@@ -56,3 +56,11 @@ from django.views.generic import RedirectView
 urlpatterns += [
     url(r'^$', RedirectView.as_view(url='/home/', permanent=True)),
 ]
+
+
+# Use static() to add url mapping to serve static files during development (only) 
+#### I KNOW IT ONLY SAYS DURING DEVELOPMENT BUT I DONT KNOW WHERE ELSE TO PUT STATIC FILES (CSS)
+from django.conf import settings
+from django.conf.urls.static import static
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
