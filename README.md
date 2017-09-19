@@ -10,8 +10,12 @@
     * Short Explanation: Allows you create an "environment" that seperates GLOBAL Python settings with LOCAL Python settings
     * Long Explanation: 
     * [Virtual Environment (All OSes)](https://virtualenv.pypa.io/en/stable/)
-    * Virtual Environment Wrapper - [Windows](https://pypi.python.org/pypi/virtualenvwrapper-win) - [Mac/Unix/Linux](https://virtualenvwrapper.readthedocs.io/en/latest/)
+    * Virtual Environment Wrapper - [Windows](https://pypi.python.org/pypi/virtualenvwrapper-win) - [Mac,Unix/Linux](https://virtualenvwrapper.readthedocs.io/en/latest/)
 * Github Account (to pull and push to deploy branch) 
+* Git [https://git-scm.com/](https://git-scm.com/)
+
+## Local Development
+
 
 ## Updating
 
