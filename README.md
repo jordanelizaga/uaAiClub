@@ -3,10 +3,11 @@
 ## About The Project
 
 ## Prerequisites 
-- Django [https://www.djangoproject.com/](https://www.djangoproject.com/)
-* Python 3 Latest Version [https://www.python.org/](https://www.python.org/) (and Pip, included with Python) 
-* **(HIGHLY RECOMMENDED)** Virtual Environment
-- Github Account (to pull and push to deploy branch) 
+* Django [https://www.djangoproject.com/](https://www.djangoproject.com/)
+  * Python 3 Latest Version [https://www.python.org/](https://www.python.org/) (and Pip, included with Python) 
+  * **(HIGHLY RECOMMENDED)** Virtual Environment
+    * Test
+* Github Account (to pull and push to deploy branch) 
 
 ## Updating
 
