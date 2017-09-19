@@ -17,6 +17,11 @@ Every file with the commit:
 **SHOULD NOT BE CHANGED**
 ### Updating Database: e.g. Events, Schedule, Projects, Resources, etc. 
 
+
+```python
+$ python manage.py collectstatic
+```
+
 ### Adding A Webpage 
 
 ### Remaking Website from Scratch (Warning: MAKE SURE YOU KNOW WHAT YOU'RE DOING)
