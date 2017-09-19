@@ -4,9 +4,13 @@
 
 ## Prerequisites 
 * Django [https://www.djangoproject.com/](https://www.djangoproject.com/)
+  * [Django Installation Help](https://docs.djangoproject.com/en/1.11/intro/install/)
   * Python 3 Latest Version [https://www.python.org/](https://www.python.org/) (and Pip, included with Python) 
-  * **(HIGHLY RECOMMENDED)** Virtual Environment
-    * Test
+  * **(HIGHLY RECOMMENDED)** Virtual Environment & Virtual Environment Wrapper
+    * Short Explanation: Allows you create an "environment" that seperates GLOBAL Python settings with LOCAL Python settings
+    * Long Explanation: 
+    * [Virtual Environment (All OSes)](https://virtualenv.pypa.io/en/stable/)
+    * Virtual Environment Wrapper - [Windows](https://pypi.python.org/pypi/virtualenvwrapper-win) - [Mac/Unix/Linux](https://virtualenvwrapper.readthedocs.io/en/latest/)
 * Github Account (to pull and push to deploy branch) 
 
 ## Updating
