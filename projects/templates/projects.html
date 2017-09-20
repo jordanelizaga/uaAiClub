@@ -8,4 +8,24 @@
 <h3> Project 1 </h3>
 <h3> Project #___# </h3> -->
 
+{% if project_list %}
+<ul>
+{% for project in project_list %}
+    <li>{{ project.project_name }}</li>
+    
+    <ul>
+        {% for bulletinPost in project.bulletinpost_set.all %}
+            <li>{{ bulletinPost.post_date }} // {{ bulletinPost.post_user }} // {{ bulletinPost.post_message }}</li>
+        {% endfor %}
+    </ul>
+
+{% endfor %}
+</ul>
+{% else %}
+<p>No polls are available.</p>
+{% endif %}
+
+
+
+
 {% endblock %}
