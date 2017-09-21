@@ -15,7 +15,7 @@ class Description(models.Model):
     
 class BulletinPost(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
-    post_date = models.DateTimeField('date posted')
+    post_date = models.DateTimeField('Date Posted')
     post_user = models.CharField(max_length=35)
     post_message = models.CharField(max_length=140)
     def __str__(self):
