@@ -37,7 +37,7 @@ urlpatterns = [
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    url(r'^admin/', admin.site.urls),
+    url(r'^admin/', include(admin.site.urls),
 ]
 
 # Use include() to add URLS from the catalog application 
