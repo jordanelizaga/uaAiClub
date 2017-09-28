@@ -9,16 +9,15 @@
 <h3> Project 1 </h3>
 <h3> Project #___# </h3> -->
 
-{% if project_list %}
-<ul>
-{% for project in project_list %}
-    <li><a href="/projects/{{ project.id }}">{{ project.project_name }}</a></li>
-    
+{% if project %}
+    {{ project.project_name }}
 
-{% endfor %}
-</ul>
-{% else %}
-<p>No projects are available.</p>
+    <ul>
+        {% for bulletinPost in project.bulletinpost_set.all %}
+            <li>{{ bulletinPost.post_date }} // {{ bulletinPost.post_user }} // {{ bulletinPost.post_message }}</li>
+        {% endfor %}
+    </ul>
+
 {% endif %}
 
 <form action="" method="post">
