@@ -8,8 +8,17 @@ class PostForm(forms.ModelForm):
     class Meta: 
         model = BulletinPost
         fields = ['project', 'post_date', 'post_user', 'post_message' ]
-        widgets = {'post_date': forms.HiddenInput()}
-    # project = forms.ModelChoiceField(queryset= Project.objects.all())
-    # post_date = forms.DateTimeField(label='Date Posted', initial=datetime.now(), )
-    # post_user = forms.CharField(max_length=35)
-    # post_message = forms.CharField(max_length=140)
+        widgets = {
+            'project': forms.HiddenInput(), 
+            'post_date': forms.HiddenInput(),
+            'post_message' :  forms.Textarea(attrs={'cols': 55, 'rows': 20}),
+        }
+
+class ProjectForm(forms.ModelForm):
+    class Meta:
+        model = Project
+        fields = '__all__'
+        widgets = {
+            'pub_date': forms.HiddenInput(),
+            'project_desc' :  forms.Textarea(attrs={'cols': 55, 'rows': 20}),
+        }
