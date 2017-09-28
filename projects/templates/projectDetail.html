@@ -11,6 +11,7 @@
 
 {% if project %}
     {{ project.project_name }}
+    <p> {{ project.project_desc }} </p>
 
     <ul>
         {% for bulletinPost in project.bulletinpost_set.all %}
