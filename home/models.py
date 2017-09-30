@@ -9,9 +9,14 @@ class Newsletter(models.Model):
     firstName = models.CharField(max_length=100)
     lastName = models.CharField(max_length=100)
     def __str__(self):
-        return self.firstName + ' ' + self.lastName
+        return self.email
 
 class NewsletterForm(ModelForm):
     class Meta:
         model = Newsletter
+        labels = { 
+            "email" : "E-Mail",
+            "firstName" : "First Name",
+            "lastName" : "Last Name",
+        }
         fields = '__all__'
