@@ -2,28 +2,41 @@
 
 {% block content %}
 
-<h1> UNDER CONSTRUCTION </h1>
-<p> Want to make this site better? Let me know! <br><u>jelizaga@crimson.ua.edu</u></p>
-<!-- <h1><em>UA AI/ML Club</em> </h1>
-<h2> Projects</h2>
-<h3> Project 1 </h3>
-<h3> Project #___# </h3> -->
+<div class="column section">
 
-{% if project %}
-    {{ project.project_name }}
-    <p> {{ project.project_desc }} </p>
-    <ul>
-        {% for bulletinPost in project.bulletinpost_set.all %}
-            <li>{{ bulletinPost.post_date }} // {{ bulletinPost.post_user }} // {{ bulletinPost.post_message }}</li>
-        {% endfor %}
-    </ul>
+    <nav class="breadcrumb is-large" aria-label="breadcrumbs">
+        <ul>
+        <li><a class="title is-4" href="index.html">AI & ML Club</a></li>
+        <li class="is-active">
+            <a class="title is-4" href="#" aria-current="page"><span class="icon is-small"><i class="fa fa-briefcase"></i></span> Projects</a>
+        </li>
+        </ul>
+    </nav>
+    
 
-{% endif %}
+    <h1> UNDER CONSTRUCTION </h1>
+    <p> Want to make this site better? Let me know! <br><u>jelizaga@crimson.ua.edu</u></p>
+    <!-- <h1><em>UA AI/ML Club</em> </h1>
+    <h2> Projects</h2>
+    <h3> Project 1 </h3>
+    <h3> Project #___# </h3> -->
 
-<form action="" method="post">
-    {% csrf_token %}
-{{ form }}    
-<input type="submit" value="OK">
-</form>
+    {% if project %}
+        {{ project.project_name }}
+        <p> {{ project.project_desc }} </p>
+        <ul>
+            {% for bulletinPost in project.bulletinpost_set.all %}
+                <li>{{ bulletinPost.post_date }} // {{ bulletinPost.post_user }} // {{ bulletinPost.post_message }}</li>
+            {% endfor %}
+        </ul>
+
+    {% endif %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+    {{ form }}    
+    <input type="submit" value="OK">
+    </form>
+</div>
 
 {% endblock %}
