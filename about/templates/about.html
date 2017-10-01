@@ -2,10 +2,27 @@
 
 {% block content %}
 
-<h1><em>UA AI/ML Club</em> </h1>
-<h2> About Us </h2>
-<p>Welcome to the <strong>University of Alabama: Artificial Intelligence and Machine Learning [AI/ML] club</strong>. Join our growing club and participate in projects that interest you: mathematics, business, finance, science, and art. Interested in something else? Suggest a project, all majors are welcome! </p>
-<p> This site is under construction: if you would like to contribute to this growing website, feel free to contact me at: <br><u>jelizaga@crimson.ua.edu</u></p>
-<p> Prereq's: NONE! If you aspire to learn web development and design, we can help get you up to speed :-) </p>
 
+<div class="column section">
+    
+    
+    <nav class="breadcrumb is-large" aria-label="breadcrumbs">
+        <ul>
+            <li><a class="title is-4" href="{% url 'index' %}">AI & ML Club</a></li>
+            <li class="is-active">
+                <a class="title is-4" href="#" aria-current="page"><span class="icon is-small"><i class="fa fa-info-circle"></i></span> About Us</a>
+            </li>
+        </ul>
+    </nav>
+
+    <p>Welcome to the <strong>University of Alabama: Artificial Intelligence and Machine Learning [AI/ML] club</strong>. Join our growing club and participate in projects that interest you: mathematics, business, finance, science, and art. Interested in something else? Suggest a project, all majors are welcome! </p>
+    <br>
+    
+    <p> This site is under construction: if you would like to contribute to this growing website, feel free to contact me at: <br><u>jelizaga@crimson.ua.edu</u></p>
+    
+    <br>
+    
+    <p> Prereq's: NONE! If you aspire to learn web development and design, we can help get you up to speed :-) </p>
+
+</div>
 {% endblock %}
