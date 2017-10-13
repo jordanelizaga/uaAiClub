@@ -11,7 +11,10 @@ class PostForm(forms.ModelForm):
         widgets = {
             'project': forms.HiddenInput(), 
             'post_date': forms.HiddenInput(),
-            'post_message' :  forms.Textarea(attrs={'cols': 55, 'rows': 20}),
+            'post_user': forms.TextInput(attrs={
+                'class': 'input is-primary',
+            }),
+            'post_message' :  forms.Textarea(attrs={'cols': 55, 'rows': 10}),
         }
 
 class ProjectForm(forms.ModelForm):
