@@ -1,0 +1,50 @@
+.container {
+    margin-top: 10px;
+  }
+  
+  #chat {
+    width: 40vw;
+    margin: 0;
+  /*   border: 1px solid black; */
+  }
+  
+  #chat-box {
+    box-shadow: rgb(0, 209, 178);
+    height: 500px;
+    overflow-y: auto;
+  }
+  
+  .card-header { 
+
+  }
+
+  .tile.is-child {
+    max-width: fit-content;
+  }
+  
+  .tile.is-pulled-right {
+    margin-left: auto;
+    display:block;
+    float:right;
+  }
+  
+  .message, .date {
+    display: block;
+  }
+  
+  textarea {
+      display: block; 
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .message-body {
+    }
+    
+ .message-body > p {
+    overflow-wrap: break-word;    
+  }
+
+  .hidden {
+    display: none;
+  }
