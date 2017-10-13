@@ -4,7 +4,7 @@ from django.db import models
 class Project(models.Model):
     project_name = models.CharField(max_length=50, default="")
     pub_date = models.DateTimeField('Date Created')
-    project_desc = models.CharField(max_length=10000, default="")
+    project_desc = models.TextField(max_length=10000, default="")
     def __str__(self):
         return self.project_name
     
