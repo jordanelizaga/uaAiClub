@@ -2,9 +2,9 @@ from django.db import models
 
 # Create your models here.
 class Project(models.Model):
-    project_name = models.CharField(max_length=50, default="")
+    project_name = models.CharField("Project Name", max_length=50, default="")
     pub_date = models.DateTimeField('Date Created')
-    project_desc = models.CharField(max_length=10000, default="")
+    project_desc = models.TextField("Project Description", max_length=10000, default="")
     def __str__(self):
         return self.project_name
     

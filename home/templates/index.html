@@ -33,13 +33,15 @@
 
 				<!-- Mailing List Form -->
 				<h1 class="title is-4">Fill out the form to add yourself to our mailing list & Stay updated with all the latest information.</h1>
-
+			
+			<form action="" method="post">	
+				{% csrf_token %}					
 				<div class="columns">
 					<div class="column">
 						<div class="field">
 							<label class="label">First Name</label>
 							<div class="control">
-    						<input class="input" type="text" placeholder="First Name..">
+							<input class="input" type="text" placeholder="First Name.."  name="firstName" maxlength="100" required="" id="id_firstName">
   						</div>
   					</div>
 					</div>
@@ -47,7 +49,7 @@
 						<div class="field">
 							<label class="label">Last Name</label>
 							<div class="control">
-    						<input class="input" type="text" placeholder="Last Name..">
+							<input  class="input" type="text" placeholder="Last Name.." name="lastName" maxlength="100" required="" id="id_lastName">								
   						</div>
 						</div>
 					</div>
@@ -56,15 +58,14 @@
 				<div class="field">
 					<label class="label">Email</label>
 					<div class="control is-expanded">
-    				<input class="input" type="text" placeholder="Email..">
-  				</div>
-  			</div>
+					<input class="input" type="email" name="email" maxlength="254" required="" id="id_email"  placeholder="Email..">
+  					</div>
+				</div>
+				<input class="button is-danger is-outlined" type="submit" value="Add Me!">
+				
+			</form>
+				
 
-  			<div class="field">
-  				<div class="control">
-  				  <a class="button is-danger is-outlined">Add Me</a>
-  				</div>
-  			</div>
 
 				<hr>
 
