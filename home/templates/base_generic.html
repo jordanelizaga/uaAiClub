@@ -12,6 +12,11 @@
 	<link rel="stylesheet" href="{% static 'css/navigation.css' %}">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+	
+	<!-- Add additional APP-SPECIFIC CSS in static file -->
+	{% block styles %}
+	{% endblock %}
+
 </head>
 <body>
 

@@ -1,10 +1,13 @@
-{% extends "base_generic.html" %}
 
-{% load static %}
-<link rel="stylesheet" href="{% static 'css/custom.css' %}">
-<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+{% extends "base_generic.html" %}
+{% load staticfiles %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'projects/css/custom.css' %}">
+{% endblock %}
 
 {% block content %}
+{% load staticfiles %}
 
 <div class="column section">
 
@@ -16,31 +19,43 @@
         </li>
         </ul>
     </nav>
-    
-
-    <h1> UNDER CONSTRUCTION </h1>
-    <p> Want to make this site better? Let me know! <br><u>jelizaga@crimson.ua.edu</u></p>
-    <!-- <h1><em>UA AI/ML Club</em> </h1>
-    <h2> Projects</h2>
-    <h3> Project 1 </h3>
-    <h3> Project #___# </h3> -->
 
     {% if project %}
-        {{ project.project_name }}
-        <p> {{ project.project_desc }} </p>
-        <ul>
+    
+    <div id="chat">
+        <h1 class="title is-2 has-text-centered">    {{ project.project_name }}   </h1>
+        
+        <div class="card-header"><p class="card-header-title">{{ project.project_desc }} </p></div>
+        <div id="chat-box" class="card">
+          <div class="card-content">
+            <div class="tile is-ancestor is-vertical">
             {% for bulletinPost in project.bulletinpost_set.all %}
-                <li>{{ bulletinPost.post_date }} // {{ bulletinPost.post_user }} // {{ bulletinPost.post_message }}</li>
+            <div class="tile is-child">
+                <article class="message is-dark">
+                    <div class="message-header"><p>{{ bulletinPost.post_user }} </p></div>
+                    <div class="message-body"><p>{{ bulletinPost.post_message }} </p></div>
+                </article>
+                <div class="date hidden">
+                    <time datetime="">{{ bulletinPost.post_date }}</time>
+                </div>
+            </div>
             {% endfor %}
-        </ul>
-
+            <!-- Run Scripts AFTER it is looped over -->
+            <script type="text/javascript" src="{% static 'projects/js/script.js' %}"></script>            
+              
+            </div>
+          </div>
+        </div>
+        
+        <form action="" method="post">
+                {% csrf_token %}
+            {{ form }}    
+            <input class="button is-danger is-outlined" type="submit" value="Post Message">
+        </form>
+      </div>
+   
     {% endif %}
 
-    <form action="" method="post">
-        {% csrf_token %}
-    {{ form }}    
-    <input type="submit" value="OK">
-    </form>
 </div>
 
 {% endblock %}

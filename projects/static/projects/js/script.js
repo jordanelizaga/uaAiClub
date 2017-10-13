@@ -1,4 +1,4 @@
-let message = document.querySelectorAll('.message');
+let message = document.getElementsByClassName('message');
 
 for (var i = 0; i < message.length; i++) {
   message[i].addEventListener('mouseover' , function() {
@@ -20,3 +20,7 @@ function removeHidden(el) {
   if (classList.contains('hidden'))
     classList.remove('hidden');
 };
+
+// Scroll to most recent message
+var div = document.getElementById("chat-box");
+div.scrollTop = div.scrollHeight;
