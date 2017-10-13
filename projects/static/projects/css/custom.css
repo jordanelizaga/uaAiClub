@@ -38,9 +38,6 @@
     margin-bottom: 30px;
   }
 
-  .message-body {
-    }
-    
  .message-body > p {
     overflow-wrap: break-word;    
   }
