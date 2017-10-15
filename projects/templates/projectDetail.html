@@ -33,7 +33,7 @@
             <div class="tile is-child">
                 <article class="message is-dark">
                     <div class="message-header"><p>{{ bulletinPost.post_user }} </p></div>
-                    <div class="message-body"><p>{{ bulletinPost.post_message }} </p></div>
+                    <div class="message-body"><p>{{ bulletinPost.post_message|linebreaksbr }} </p></div>
                 </article>
                 <div class="date hidden">
                     <time datetime="">{{ bulletinPost.post_date }}</time>
