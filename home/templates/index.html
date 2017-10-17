@@ -80,70 +80,23 @@
 						<tr>
 							<th class="is-light">Date</th>
 							<th class="is-light">Description</th>
-							<th class="is-light">Ideas</th>
+							<th class="is-light">Location</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td>Sept 18</td>
-							<td>Interest & planning</td>
-							<td>Lorem ipsum dolor.</td>
-						</tr>
-						<tr>
-							<td>Sept 25</td>
-							<td>Set up Python, etc on computers/teach it</td>
-							<td>Lorem ipsum dolor.</td>
-						</tr>
-						<tr>
-							<td>Oct 2</td>
-							<td>Prof. Ames talks about regression & twitter</td>
-							<td>Lorem ipsum dolor.</td>
-						</tr>
-						<tr>
-							<td>Oct 9</td>
-							<td>General Meeting & checkpoint</td>
-							<td>Lorem ipsum dolor.</td>
-						</tr>
-						<tr>
-							<td>Oct 16</td>
-							<td>Current Event, Movie, Project ideas</td>
-							<td>Lorem ipsum dolor.</td>
-						</tr>
-						<tr>
-							<td>Oct 23</td>
-							<td>Prof. Anderson talks about robotics & AI</td>
-							<td>Lorem ipsum dolor.</td>
-						</tr>
-						<tr>
-							<td>Oct 30</td>
-							<td>Do a quick and fun project as a group</td>
-							<td>Lorem ipsum dolor.</td>
-						</tr>
-						<tr>
-							<td>Nov 6</td>
-							<td>General meeting & checkpoint</td>
-							<td>Lorem ipsum dolor.</td>
-						</tr>
-						<tr>
-							<td>Nov 13</td>
-							<td>Current Event, Movie</td>
-							<td>Lorem ipsum dolor.</td>
-						</tr>
-						<tr>
-							<td>Nov 20</td>
-							<td>Prof. Sazonov talks about deep learning & his research</td>
-							<td>Lorem ipsum dolor.</td>
-						</tr>
-						<tr>
-							<td>Nov 27</td>
-							<td>NO SCHOOL !!</td>
-							<td>Lorem ipsum dolor.</td>
-						</tr>
-						<tr>
-							<td>Dec 4 (dead week)</td>
-							<td>General meeting & checkpoint/banquet</td>
-							<td>Lorem ipsum dolor.</td>
-						</tr>
+						{% if schedule_list %}
+						<ul>
+							{% for schedule in schedule_list %}
+							<tr>
+								<td>{{ schedule.date }}</td>
+								<td>{{ schedule.desc|linebreaks }}</td>
+								<td>{{ schedule.desc }}</td>
+							</tr>
+							{% endfor %}
+						{% else %}
+						<p>No schedule are available.</p>
+						{% endif %}
+
 					</tbody>
 				</table>
 
