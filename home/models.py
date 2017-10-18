@@ -10,7 +10,14 @@ class Newsletter(models.Model):
     lastName = models.CharField(max_length=100)
     def __str__(self):
         return self.email
-
+	
+class Schedule(models.Model): 
+    date = models.DateField('Date')
+    desc = models.TextField('Description',max_length=10000)
+    loc = models.CharField('Location',max_length=1000)
+    def __str__(self):
+        return " Descr.: " + self.desc
+		
 class NewsletterForm(ModelForm):
     class Meta:
         model = Newsletter
@@ -20,10 +27,3 @@ class NewsletterForm(ModelForm):
             "lastName" : "Last Name",
         }
         fields = '__all__'
-
-class Schedule(models.Model): 
-    date = models.DateField('Date')
-    desc = models.TextField('Description',max_length=10000)
-    loc = models.CharField('Location',max_length=1000)
-    def __str__(self):
-        return " Descr.: " + self.desc;      

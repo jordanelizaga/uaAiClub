@@ -48,6 +48,7 @@ urlpatterns += [
     url(r'^home/', include('home.urls')),
     url(r'^about/', include('about.urls')),
     url(r'^contact/', include('contact.urls')),
+    url(r'^events/', include('events.urls')),
     url(r'^projects/', include('projects.urls')),
     url(r'^resources/', include('resources.urls')),
 ]
@@ -65,3 +66,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+#add image directory
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
