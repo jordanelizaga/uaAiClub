@@ -34,3 +34,7 @@ coverage.xml
 
 # Django stuff:
 *.log
+
+# SQLite Database, Untracked and Ignored so database integrity is held
+# Back up database when needing to edit db.sqlite3
+# /db.sqlite3

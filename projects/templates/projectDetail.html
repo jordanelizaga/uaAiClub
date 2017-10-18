@@ -13,7 +13,7 @@
 
     <nav class="breadcrumb is-large" aria-label="breadcrumbs">
         <ul>
-        <li><a class="title is-4" href="index.html">AI & ML Club</a></li>
+        <li><a class="title is-4" href="{% url 'index' %}">AI & ML Club</a></li>
         <li class="is-active">
             <a class="title is-4" href="#" aria-current="page"><span class="icon is-small"><i class="fa fa-briefcase"></i></span> Projects</a>
         </li>
@@ -25,7 +25,7 @@
     <div id="chat">
         <h1 class="title is-2 has-text-centered">    {{ project.project_name }}   </h1>
         
-        <div class="card-header"><p class="card-header-title">{{ project.project_desc }} </p></div>
+        <div class="card-header"><p class="card-header-title">{{ project.project_desc|linebreaksbr }} </p></div>
         <div id="chat-box" class="card">
           <div class="card-content">
             <div class="tile is-ancestor is-vertical">
@@ -33,7 +33,7 @@
             <div class="tile is-child">
                 <article class="message is-dark">
                     <div class="message-header"><p>{{ bulletinPost.post_user }} </p></div>
-                    <div class="message-body"><p>{{ bulletinPost.post_message }} </p></div>
+                    <div class="message-body"><p>{{ bulletinPost.post_message|linebreaksbr }} </p></div>
                 </article>
                 <div class="date hidden">
                     <time datetime="">{{ bulletinPost.post_date }}</time>

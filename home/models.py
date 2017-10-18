@@ -14,4 +14,9 @@ class Newsletter(models.Model):
 class NewsletterForm(ModelForm):
     class Meta:
         model = Newsletter
+        labels = { 
+            "email" : "E-Mail",
+            "firstName" : "First Name",
+            "lastName" : "Last Name",
+        }
         fields = '__all__'

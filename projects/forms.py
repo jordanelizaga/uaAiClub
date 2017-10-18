@@ -23,5 +23,8 @@ class ProjectForm(forms.ModelForm):
         fields = '__all__'
         widgets = {
             'pub_date': forms.HiddenInput(),
-            'project_desc' :  forms.Textarea(attrs={'cols': 55, 'rows': 20}),
+            'project_name': forms.TextInput(attrs={
+                'class': 'input is-primary',
+            }),
+            'project_desc' :  forms.Textarea(attrs={'cols': 55, 'rows': 10}),
         }
