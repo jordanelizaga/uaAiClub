@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 # Create your views here.
 # from .models import Book, Author, BookInstance, Genre
 from .models import NewsletterForm
+from .models import Schedule
 
 def index(request):
     # Render the HTML template index.html with the data in the context variable
@@ -23,7 +24,8 @@ def index(request):
     else:
         form = NewsletterForm()
     
-    context = { 'emailForm' : form }
+    schedule_list = Schedule.objects.order_by('date')
+    context = { 'emailForm' : form, 'schedule_list': schedule_list, }
     return render(
         request,
         'index.html',
