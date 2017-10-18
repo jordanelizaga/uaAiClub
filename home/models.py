@@ -16,7 +16,7 @@ class Schedule(models.Model):
     desc = models.TextField('Description',max_length=10000)
     loc = models.CharField('Location',max_length=1000)
     def __str__(self):
-        return " Descr.: " + self.desc
+        return self.date.strftime("%d/%m/%y") + " Description: " + self.desc;      
 		
 class NewsletterForm(ModelForm):
     class Meta:
