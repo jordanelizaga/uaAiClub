@@ -8,11 +8,41 @@
         <ul>
         <li><a class="title is-4" href="{% url 'index' %}">AI & ML Club</a></li>
         <li class="is-active">
-            <a class="title is-4" href="#" aria-current="page"><span class="icon is-small"><i class="fa fa-address-book-o"></i></span> Events </a>
+            <a class="title is-4" href="#" aria-current="page"><span class="icon is-small"><i class="fa fa-calendar-o"></i></span> Events </a>
         </li>
         </ul>
     </nav>
 	
+	<div id="events">
+		{% load static %}
+		{% if event_list %}
+			{% for event in event_list %}
+				<div class="card">
+				  <div class="card-image">
+					<figure class="image is-4by3">
+					  <img src="{{ event.image.url }}" alt="Placeholder image">
+					</figure>
+				  </div>
+				  <div class="card-content">
+					<div class="media">
+					  <div class="media-content">
+						<p class="title is-4"> {{ event.title }} </p>
+					  </div>
+					</div>
+
+					<div class="content">
+
+						{{ event.desc }}
+					  <br>
+					  <time datetime="">{{ event.date }}</time>
+					</div>
+				  </div>
+				</div>
+			{% endfor %}
+		{% else %}
+		<p>No events are available.</p>
+		{% endif %}
+	</div>
     <br>
     <br>
     <br>
